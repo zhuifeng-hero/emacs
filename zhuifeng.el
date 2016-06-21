@@ -20,6 +20,7 @@
 (add-to-list 'load-path "E:/develop/emacs/");;添加查找路径
 (set-locale-environment "zh_CN.UTF-8")
 (setq diary-file "E:/develop/emacs/diary") ;设置日记文件路径
+(add-hook 'emacs-lisp-mode-hook 'yas-global-mode) ;打开yas模板
 ;;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ;;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ;;recentf mode设置
@@ -160,5 +161,13 @@
 (global-set-key (kbd "C-s") 'swiper) ;;搜索
 (global-set-key (kbd "C-c d") 'youdao-dictionary-search-at-point+);;词典功能
 ;;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+;;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+;;增加简称
+;;===================================================
+(abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ("zf" "追风英雄")
+					    ("xin"  "♥")
+					    ))
+;;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
